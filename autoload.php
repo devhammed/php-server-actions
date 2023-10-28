@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/src/functions.php';
+require_once __DIR__ . '/functions.php';
 
 spl_autoload_register(function (string $class) {
 	$class = ltrim($class, '\\');

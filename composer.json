@@ -6,7 +6,10 @@
     "require": {
         "php": ">=8.0",
         "opis/closure": "^3.6",
-        "ramsey/uuid": "^4.7"
+        "ramsey/uuid": "^4.7",
+        "illuminate/contracts": "^10.29",
+        "spatie/laravel-package-tools": "^1.16",
+        "illuminate/support": "^10.29"
     },
     "authors": [
         {
@@ -19,10 +22,17 @@
             "DevHammed\\ServerActions\\": "src/"
         },
         "files": [
-            "src/functions.php"
+            "functions.php"
         ]
     },
     "scripts": {
         "example": "php -S localhost:8000 -t example/"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DevHammed\\ServerActions\\ServerActionsProvider"
+            ]
+        }
     }
 }
