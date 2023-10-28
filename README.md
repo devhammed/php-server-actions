@@ -14,6 +14,16 @@ The recommended way to install this package is through [Composer](https://getcom
 composer require devhammed/server-actions
 ```
 
+Then include the Composer autoloader in your entry file (e.g `index.php`) like:
+
+```php
+<?php
+
+// File: /public/index.php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+```
+
 But you can also download this repository and include the provided `autoload.php` file e.g
 
 ```php
@@ -135,13 +145,18 @@ Then you can use the `useServer` helper function in your Blade templates like:
 <form
     method="post"
     action="<?= useServer(function (string $name) {
-            echo 'Hello, ' . $name;
+            return 'Hello, ' . $name;
     }) ?>"
 >
+    @csrf
     <input type="hidden" name="name" value="Hammed">
     <button type="submit">Greet the creator</button>
 </form>
 ```
+
+Note that the `@csrf` directive is required for Laravel to accept the request since this is like
+every other form request and the handler can be used just like you would use a controller method e.g redirecting, returning a view, etc.
+which is why we are returning a string instead of echoing it unlike the vanilla PHP example.
 
 That's it! Go make some server actions!
 

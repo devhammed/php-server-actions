@@ -3,7 +3,7 @@
     "description": "PHP server actions!",
     "type": "library",
     "license": "MIT",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "require": {
         "php": ">=8.0",
         "opis/closure": "^3.6",
@@ -38,9 +38,6 @@
         "files": [
             "functions.php"
         ]
-    },
-    "scripts": {
-        "example": "php -S localhost:8000 -t example/"
     },
     "extra": {
         "laravel": {
