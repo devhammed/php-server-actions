@@ -1,0 +1,28 @@
+{
+    "name": "devhammed/server-actions",
+    "description": "PHP server actions!",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0",
+        "opis/closure": "^3.6",
+        "ramsey/uuid": "^4.7"
+    },
+    "authors": [
+        {
+            "name": "Hammed Oyedele",
+            "email": "itz.harmid@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DevHammed\\ServerActions\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "scripts": {
+        "example": "php -S localhost:8000 -t example/"
+    }
+}
