@@ -13,11 +13,11 @@ class ServerActionsProvider extends PackageServiceProvider
 		$package->name('server-actions')
 		        ->hasConfigFile()
 		        ->hasRoute('web')
-		        ->hasInstallCommand(function(InstallCommand $command) {
+		        ->hasInstallCommand(function (InstallCommand $command) {
 					$command
 						->publishConfigFile()
 						->askToStarRepoOnGitHub('devhammed/php-server-actions')
-						->endWith(function($command) {
+						->endWith(function ($command) {
 							$command->info('Have a great day!');
 						});
 				});
