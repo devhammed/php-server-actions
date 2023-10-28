@@ -2,7 +2,6 @@
 
 namespace DevHammed\ServerActions;
 
-use Illuminate\Support\Facades\Config;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
@@ -36,8 +35,7 @@ class ServerActionsProvider extends PackageServiceProvider
 			...$serverActionsEntryProvider['parameters'],
 		);
 
-		useServer()
-			->withServerActionsUrl(Config::get('server-actions.route'))
-			->withServerEntry($provider);
+		useServer()->withServerEntry($provider)
+		           ->withServerActionsUrl($config['route']);
 	}
 }
