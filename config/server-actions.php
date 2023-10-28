@@ -17,7 +17,7 @@ return [
 	'server_entry' => [
 		'provider' => \DevHammed\ServerActions\Concerns\JsonFileServerEntry::class,
 		'parameters' => [
-			\Illuminate\Support\Facades\App::storagePath('server-actions.json'),
+			storage_path('server-actions.json'),
 		],
 	],
 ];
