@@ -1,4 +1,6 @@
-# php-server-actions
+# devhammed/server-actions
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/devhammed/server-actions.svg?style=flat-square)](https://packagist.org/packages/devhammed/server-actions)
 
 Making [Next.js Server Actions](https://nextjs.org/docs/app/api-reference/functions/server-actions) work in PHP!
 
