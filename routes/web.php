@@ -14,7 +14,7 @@ Route::group([
 	'prefix' => Config::get('server-actions.route'),
 	'middleware' => Config::get('server-actions.middleware'),
 ], function() {
-	Route::get('/', function() {
+	Route::post('/', function() {
 		try {
 			return useServer()->run();
 		} catch (InvalidIndexException|InvalidServerActionException $e) {
