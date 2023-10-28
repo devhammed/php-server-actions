@@ -3,7 +3,7 @@
     "description": "PHP server actions!",
     "type": "library",
     "license": "MIT",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "require": {
         "php": ">=8.0",
         "opis/closure": "^3.6",
