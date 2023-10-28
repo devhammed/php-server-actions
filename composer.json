@@ -12,10 +12,23 @@
         "spatie/laravel-package-tools": "^1.16",
         "illuminate/support": "^10.0"
     },
+    "homepage": "https://github.com/devhammed/php-server-actions",
+    "keywords": [
+        "php",
+        "server",
+        "actions",
+        "server actions",
+        "php actions",
+        "php server",
+        "php server actions",
+        "nextjs"
+    ],
     "authors": [
         {
             "name": "Hammed Oyedele",
-            "email": "itz.harmid@gmail.com"
+            "email": "itz.harmid@gmail.com",
+            "homepage": "https://hammed.dev",
+            "role": "Creator"
         }
     ],
     "autoload": {
