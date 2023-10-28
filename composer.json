@@ -34,5 +34,7 @@
                 "DevHammed\\ServerActions\\ServerActionsProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
