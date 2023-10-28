@@ -5,7 +5,7 @@ namespace DevHammed\ServerActions;
 use Closure;
 use DevHammed\ServerActions\Concerns\Server;
 
-function serverAction(?Closure $callback = null): Server|string
+function useServer(?Closure $callback = null): Server|string
 {
 	static $server = null;
 

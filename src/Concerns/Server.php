@@ -38,7 +38,7 @@ class Server
 	/**
 	 * Set the server actions URL.
 	 */
-	public function setServerActionsUrl(string $serverActionsUrl): self
+	public function withServerActionsUrl(string $serverActionsUrl): self
 	{
 		$this->serverActionsUrl = $serverActionsUrl;
 
@@ -48,7 +48,7 @@ class Server
 	/**
 	 * Set the server actions entries.
 	 */
-	public function setServerEntry(ServerEntry $serverEntry): self
+	public function withServerEntry(ServerEntry $serverEntry): self
 	{
 		$this->serverEntry = $serverEntry;
 

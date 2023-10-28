@@ -4,11 +4,11 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use DevHammed\ServerActions\Concerns\JsonFileServerEntry;
 
-use function DevHammed\ServerActions\serverAction;
+use function DevHammed\ServerActions\useServer;
 
-serverAction()
-	->setServerActionsUrl('/server-actions.php')
-	->setServerEntry(
+useServer()
+	->withServerActionsUrl('/server-actions.php')
+	->withServerEntry(
 		new JsonFileServerEntry(
 			__DIR__ . '/server-actions.json',
 		),
