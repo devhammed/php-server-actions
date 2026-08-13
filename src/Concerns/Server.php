@@ -63,13 +63,13 @@ class Server
 		$actionName = $_GET['_action'] ?? null;
 
 		if (is_null($actionName)) {
-			throw new InvalidIndexException('No action index provided.', 400);
+			throw new InvalidIndexException('No action index provided.');
 		}
 
 		$action = $this->serverEntry->get($actionName);
 
 		if (is_null($action)) {
-			throw new InvalidServerActionException('No action found.', 404);
+			throw new InvalidServerActionException('No action found.');
 		}
 
 		$actionParameters = (new ReflectionFunction($action))->getParameters();
@@ -84,7 +84,7 @@ class Server
 					return null;
 				}
 
-				throw new RequiredServerParameterException( 'No value provided for the action parameter: ' . $name, 422);
+				throw new RequiredServerParameterException( 'No value provided for the action parameter: ' . $name);
 			}
 
 			return match ($type) {
