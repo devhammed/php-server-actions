@@ -84,13 +84,13 @@ class Server
 					return null;
 				}
 
-				throw new RequiredServerParameterException( 'No value provided for the action parameter: ' . $name);
+				throw new RequiredServerParameterException('No value provided for the action parameter: ' . $name);
 			}
 
 			return match ($type) {
 				'int' => (int) $value,
 				'float' => (float) $value,
-				'bool', 'boolean' => $value === 'true',
+				'bool', 'boolean' => filter_var($value, FILTER_VALIDATE_BOOLEAN),
 				default => $value,
 			};
 		}, $actionParameters);
