@@ -32,7 +32,7 @@ class Server
 
 		$this->serverEntry->register($actionName, $callback);
 
-		return $this->serverActionsUrl . '?action=' . $actionName;
+		return $this->serverActionsUrl . '?__action=' . $actionName;
 	}
 
 	/**
@@ -60,7 +60,7 @@ class Server
 	 */
 	public function run(): mixed
 	{
-		$actionName = $_GET['action'] ?? null;
+		$actionName = $_GET['__action'] ?? null;
 
 		if (is_null($actionName)) {
 			throw new InvalidIndexException('No action index provided.', 400);
